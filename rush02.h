@@ -6,7 +6,7 @@
 /*   By: cthongsa <cthongsa@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 12:38:52 by cthongsa          #+#    #+#             */
-/*   Updated: 2026/05/24 16:09:54 by cthongsa         ###   ########.fr       */
+/*   Updated: 2026/05/24 17:38:31 by cthongsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*read_file_buf(char *filename);
 int		process_lines(char *buf, t_dict *d);
 int		dict_load(char *filename, t_dict *d);
 
+char	*large_remainder(char *result, char *rem, t_dict *d);
 char	*convert(char *n, t_dict *d);
 int		is_scale(char *w);
 int		is_tens_word(char *w);

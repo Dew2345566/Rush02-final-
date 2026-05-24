@@ -6,7 +6,7 @@
 /*   By: cthongsa <cthongsa@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 13:21:17 by cthongsa          #+#    #+#             */
-/*   Updated: 2026/05/24 16:08:10 by cthongsa         ###   ########.fr       */
+/*   Updated: 2026/05/24 17:47:48 by cthongsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,15 @@ static int	setup_args(int argc, char **argv, char **dict_file, char **num_str)
 
 static int	print_result(char *result, t_dict *d)
 {
-	char	*pretty;
-
 	if (!result)
 	{
 		dict_free(d);
 		return (error_exit("Dict Error"));
 	}
-	pretty = proper_syntax(result);
+	ft_putstr(result);
+	write(1, "\n", 1);
 	free(result);
 	dict_free(d);
-	if (!pretty)
-		return (error_exit("Dict Error"));
-	ft_putstr(pretty);
-	write(1, "\n", 1);
-	free(pretty);
 	return (0);
 }
 
